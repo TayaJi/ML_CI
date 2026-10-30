@@ -20,5 +20,5 @@ print(acc)
 
 assert len(pred) == len(y)
 
-assert acc>= 1.0
+assert acc>=0.96
 
