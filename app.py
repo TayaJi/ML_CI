@@ -3,6 +3,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 model = joblib.load('iris_model.pkl')
+@app.route('/')
+def home():
+    return jsonify({'message': 'Welcome to the Iris Prediction API! Use the /predict endpoint to get predictions.'})
 
 @app.route('/predict', methods=['POST'])
 def predict():
